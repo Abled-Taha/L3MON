@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: node-java-app
+    ports:
+      - "22533:22533"
+      - "22222:22222"
+    working_dir: /app/server
+    restart: unless-stopped
